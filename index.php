@@ -30,6 +30,17 @@ require './app/view/header/header.php'; ?>
     <div class="container" style="height: 500px; overflow:hidden;">
         <img src="./assets/img/pizza.jpg" class="img-fluid" alt="...">
     </div>
+    <div class="container mt-5 bg-light p-5" >
+        <h1 class="text-center" style="font-weight:bold; font-family:'Courier New', Courier, monospace">Notre Menu</h1>
+        <div class="container d-flex flex-wrap gap-5 justify-content-center mt-5">
+                <a href="" class="btn btn-outline-warning" style="border-radius:20px;">Pizza</a>
+                <a href="" class="btn btn-outline-warning" style="border-radius:20px;">Soupe</a>
+                <a href="" class="btn btn-outline-warning" style="border-radius:20px;">Tacos</a>
+                <a href="" class="btn btn-outline-warning" style="border-radius:20px;">Sambos</a>
+                <a href="" class="btn btn-outline-warning" style="border-radius:20px;">Soupe</a>
+        </div>
+    </div>
+    
 
 </div>
 
