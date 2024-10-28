@@ -16,12 +16,19 @@ class UserModel extends Database {
 
     /**
      * Va Creer un nouveau utilisateur
-     * @return []|null
+     * @param $username 
+     * 
+     * @return void
      */
 
      public function CreateUser(String $username,String $email, String $password, String $adress, String $tel, String $profil ): void{
-         $query = parent::getPdo()->prepare('INSERT INTO users(`username`,`email`,`password`,`adress`,`tel`, `profil`) VALUES (?,?,?,?,?,?)');
-         $query->execute([$username,$email, $password, $adress, $tel, $profil]);
+        if($this->CheckExistEmail($email) === false){
+                     $query = parent::getPdo()->prepare('INSERT INTO users(`username`,`email`,`password`,`adress`,`tel`, `profil`) VALUES (?,?,?,?,?,?)');
+                    $query->execute([$username,$email, $password, $adress, $tel, $profil]);
+        }else{
+            echo 'cet email existe deja';
+        }
+
      }
 
     /**
