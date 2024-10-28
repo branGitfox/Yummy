@@ -18,7 +18,7 @@ require './app/view/header/header.php';
     </div>
     <!-- menu et filtres -->
     <div class="container mt-1 bg-light p-3">
-        <h1 class="text-center" style="font-weight:bold; font-family:'Courier New', Courier, monospace">Notre Menu</h1>
+        <h1 class="text-center" style="font-weight:bold; font-family:'Courier New', Courier, monospace">Notre Menu 🤗</h1>
         <div class="container w-50 d-flex gap-1">
                 <input type="text" placeholder='trouver le plat que vous voulez...' class="form-control"><button class='btn btn-warning'>Rechercher</button>
         </div>
@@ -37,30 +37,33 @@ require './app/view/header/header.php';
                         <img src="./assets/img/pizza.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <p>Hamburger</p>
-                            <a href="#" class="btn btn-warning text-center">Ajouter a la commande</a>
+                            <a href="#" class="btn btn-warning text-center">Ajouter a la commande 🍽️</a>
                         </div>
                 </div>
                 <div class="card shadow" style="width: 20rem;">
                         <img src="./assets/img/pizza.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <p>Hamburger</p>
-                            <a href="#" class="btn btn-warning text-center">Ajouter a la commande</a>
+                            <a href="#" class="btn btn-warning text-center">Ajouter a la commande 🍽️</a>
                         </div>
                 </div>
                 <div class="card shadow" style="width: 20rem;">
                         <img src="./assets/img/pizza.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <p>Hamburger</p>
-                            <a href="#" class="btn btn-warning text-center">Ajouter a la commande</a>
+                            <a href="#" class="btn btn-warning text-center">Ajouter a la commande 🍽️</a>
                         </div>
                 </div>
                 <div class="card shadow" style="width: 20rem;">
                         <img src="./assets/img/pizza.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <p>Hamburger</p>
-                            <a href="#" class="btn btn-warning text-center">Ajouter a la commande</a>
+                            <a href="#" class="btn btn-warning text-center">Ajouter a la commande 🍽️</a>
                         </div>
                 </div>
+        </div>
+        <div class="container absolute  mt-5 " style='height:20px;'>  
+            <h6 class='text-center'>Copyright 2024 Yummy. Made with ❤️ by <a href="www.github.com/BranGitfox">Brandon Fidelin</a> </h6>
         </div>
     </div>
 
