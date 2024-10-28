@@ -17,7 +17,7 @@ require './app/view/header/header.php'; ?>
                         <a class="nav-link" href="#">Link</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-disabled="true">Disabled</a>
+                        <a class="nav-link" href="#">A propos de nous</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
@@ -33,11 +33,15 @@ require './app/view/header/header.php'; ?>
     <div class="container mt-5 bg-light p-5" >
         <h1 class="text-center" style="font-weight:bold; font-family:'Courier New', Courier, monospace">Notre Menu</h1>
         <div class="container d-flex flex-wrap gap-5 justify-content-center mt-5">
-                <a href="" class="btn btn-outline-warning" style="border-radius:20px;">Pizza</a>
-                <a href="" class="btn btn-outline-warning" style="border-radius:20px;">Soupe</a>
-                <a href="" class="btn btn-outline-warning" style="border-radius:20px;">Tacos</a>
-                <a href="" class="btn btn-outline-warning" style="border-radius:20px;">Sambos</a>
-                <a href="" class="btn btn-outline-warning" style="border-radius:20px;">Soupe</a>
+                <a href="" class="btn btn-outline-warning" style="border-radius:20px;">Pizzas</a>
+                <a href="" class="btn btn-outline-secondary" style="border-radius:20px;">Soupes</a>
+                <a href="" class="btn btn-outline-secondary" style="border-radius:20px;">Riz</a>
+                <a href="" class="btn btn-outline-secondary" style="border-radius:20px;">Tacoss</a>
+                <a href="" class="btn btn-outline-secondary" style="border-radius:20px;">Samboss</a>
+                <a href="" class="btn btn-outline-secondary" style="border-radius:20px;">Gratins</a>
+                <a href="" class="btn btn-outline-secondary" style="border-radius:20px;">Boissons</a>
+                <a href="" class="btn btn-outline-secondary" style="border-radius:20px;">Glaces</a>
+
         </div>
     </div>
     
