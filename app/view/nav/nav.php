@@ -16,9 +16,9 @@
                         <a class="nav-link" href="#">A propos de nous</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Rechercher</button>
+                <form class="d-flex align-items-center gap-3" role="search">
+                    <h6 class=" mt-2">Brandon Fidelin</h6>
+                    <img src="./assets/img/coca.jpg"  style="width: 30px; height:30px;border-radius:50%;" alt="">
                 </form>
             </div>
         </div>
