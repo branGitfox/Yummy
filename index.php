@@ -29,6 +29,36 @@ require './app/view/header/header.php';
             <a href="" class="btn btn-outline-secondary" style="border-radius:20px;">Boissons</a>
             <a href="" class="btn btn-outline-secondary" style="border-radius:20px;">Glaces</a>
         </div>
+        <div class="container d-flex justify-content-center gap-4 mt-5">
+                <div class="card" style="width: 20rem;">
+                        <img src="./assets/img/pizza.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p>Hamburger</p>
+                            <a href="#" class="btn btn-warning text-center">Ajouter a la commande</a>
+                        </div>
+                </div>
+                <div class="card" style="width: 20rem;">
+                        <img src="./assets/img/pizza.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p>Hamburger</p>
+                            <a href="#" class="btn btn-warning text-center">Ajouter a la commande</a>
+                        </div>
+                </div>
+                <div class="card" style="width: 20rem;">
+                        <img src="./assets/img/pizza.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p>Hamburger</p>
+                            <a href="#" class="btn btn-warning text-center">Ajouter a la commande</a>
+                        </div>
+                </div>
+                <div class="card" style="width: 20rem;">
+                        <img src="./assets/img/pizza.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p>Hamburger</p>
+                            <a href="#" class="btn btn-warning text-center">Ajouter a la commande</a>
+                        </div>
+                </div>
+        </div>
     </div>
 
 
