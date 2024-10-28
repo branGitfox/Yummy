@@ -1,5 +1,7 @@
 <?php $title = 'home';
-require './app/view/header/header.php'; ?>
+require './app/view/header/header.php'; 
+
+?>
 <div id="container" class="container" style="height:100vh; overflow-y:scroll">
 
     <!-- navbar -->
