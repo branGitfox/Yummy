@@ -23,8 +23,8 @@ class UserModel extends Database {
 
      public function CreateUser(String $username,String $email, String $password, String $adress, String $tel, String $profil ): void{
         if($this->CheckExistEmail($email) === false){
-                     $query = parent::getPdo()->prepare('INSERT INTO users(`username`,`email`,`password`,`adress`,`tel`, `profil`) VALUES (?,?,?,?,?,?)');
-                    $query->execute([$username,$email, $password, $adress, $tel, $profil]);
+            $query = parent::getPdo()->prepare('INSERT INTO users(`username`,`email`,`password`,`adress`,`tel`, `profil`) VALUES (?,?,?,?,?,?)');
+             $query->execute([$username,$email, $password, $adress, $tel, $profil]);                
         }else{
             echo 'cet email existe deja';
         }
@@ -49,8 +49,36 @@ class UserModel extends Database {
      /**
       * @return bool|String
       */
-     public function ConnecUser() {
-
+     public function ConnecUser(String $email, String $password):bool {
+            if($this->CheckExistEmail() === true){
+                if(password_verify($password, $this->getUser()['password'])){
+                    $_SESSION['users']=[
+                        'id' => $this->getUser()['id_user'],
+                        'name' => $this->getUser()['username'],
+                        'email'=> $this->getUser()['email'],
+                        'tel' => $this->getUser()['tel'],
+                        'adress' => $this->getUser()['adress']
+                    ];
+                    
+                    return true;
+                }else{
+                    return false;
+                }
+            }else{
+                return false;
+            }
      }
+
+     /**
+      * Va retourner les infos d'un utilisateur
+      * @return []
+      */
+
+      public function getUser(String $email){
+            $query = parent::getPdo()->prepare('SELECT * FROM users WHERE email = ?');
+            $query->execute([$email]);
+
+            return $query->fetch();
+      }
 
 }
