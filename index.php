@@ -30,7 +30,12 @@ require './app/view/header/header.php'; ?>
     <div class="container" style="height: 500px; overflow:hidden;">
         <img src="./assets/img/pizza.jpg" class="img-fluid" alt="...">
     </div>
-    <div class="container mt-5 bg-light p-5" >
+        <div class="container d-flex flex-wrap justify-content-center gap-5 p-2 mt-3">
+            <img src="./assets/img/pizza.jpg" class="shadow"  alt="..." style="width:300px;height:200px;opacity:.9"> 
+            <img src="./assets/img/pizza.jpg"  class="shadow" alt="..." style="width:300px;height:200px;opacity:.9">
+            <img src="./assets/img/pizza.jpg" class="shadow"  alt="..." style="width:300px;height:200px;opacity:.9">
+        </div>
+    <div class="container mt-1 bg-light p-3" >
         <h1 class="text-center" style="font-weight:bold; font-family:'Courier New', Courier, monospace">Notre Menu</h1>
         <div class="container d-flex flex-wrap gap-5 justify-content-center mt-5">
                 <a href="" class="btn btn-outline-warning" style="border-radius:20px;">Pizzas</a>
@@ -41,7 +46,6 @@ require './app/view/header/header.php'; ?>
                 <a href="" class="btn btn-outline-secondary" style="border-radius:20px;">Gratins</a>
                 <a href="" class="btn btn-outline-secondary" style="border-radius:20px;">Boissons</a>
                 <a href="" class="btn btn-outline-secondary" style="border-radius:20px;">Glaces</a>
-
         </div>
     </div>
     
