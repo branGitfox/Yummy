@@ -19,6 +19,9 @@ require './app/view/header/header.php';
     <!-- menu et filtres -->
     <div class="container mt-1 bg-light p-3">
         <h1 class="text-center" style="font-weight:bold; font-family:'Courier New', Courier, monospace">Notre Menu</h1>
+        <div class="container w-50 d-flex gap-1">
+                <input type="text" placeholder='trouver le plat que vous voulez...' class="form-control"><button class='btn btn-warning'>Rechercher</button>
+        </div>
         <div class="container d-flex flex-wrap gap-5 justify-content-center mt-5">
             <a href="" class="btn btn-outline-warning" style="border-radius:20px;">Pizzas</a>
             <a href="" class="btn btn-outline-secondary" style="border-radius:20px;">Soupes</a>
@@ -29,29 +32,29 @@ require './app/view/header/header.php';
             <a href="" class="btn btn-outline-secondary" style="border-radius:20px;">Boissons</a>
             <a href="" class="btn btn-outline-secondary" style="border-radius:20px;">Glaces</a>
         </div>
-        <div class="container d-flex justify-content-center gap-4 mt-5">
-                <div class="card" style="width: 20rem;">
+        <div class="container d-flex justify-content-center gap-4 mt-5 flex-wrap">
+                <div class="card shadow" style="width: 20rem;">
                         <img src="./assets/img/pizza.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <p>Hamburger</p>
                             <a href="#" class="btn btn-warning text-center">Ajouter a la commande</a>
                         </div>
                 </div>
-                <div class="card" style="width: 20rem;">
+                <div class="card shadow" style="width: 20rem;">
                         <img src="./assets/img/pizza.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <p>Hamburger</p>
                             <a href="#" class="btn btn-warning text-center">Ajouter a la commande</a>
                         </div>
                 </div>
-                <div class="card" style="width: 20rem;">
+                <div class="card shadow" style="width: 20rem;">
                         <img src="./assets/img/pizza.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <p>Hamburger</p>
                             <a href="#" class="btn btn-warning text-center">Ajouter a la commande</a>
                         </div>
                 </div>
-                <div class="card" style="width: 20rem;">
+                <div class="card shadow" style="width: 20rem;">
                         <img src="./assets/img/pizza.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <p>Hamburger</p>
