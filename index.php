@@ -1,4 +1,5 @@
 <?php $title = 'home';
+$dir ='.';
 require './app/view/header/header.php'; 
 
 ?>
