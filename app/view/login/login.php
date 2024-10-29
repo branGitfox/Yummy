@@ -35,7 +35,7 @@ require '../header/header.php';
             </div>
     </form>
     <div class="container mt-3 text-center">
-        <a href="">Pas de compte? s'inscrire</a>
+        <a href="../sign/sign.php">Pas de compte? s'inscrire</a>
     </div>
 </div>
 
