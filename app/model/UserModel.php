@@ -77,7 +77,6 @@ class UserModel extends Database {
       public function getUser(String $email){
             $query = parent::getPdo()->prepare('SELECT * FROM users WHERE email = ?');
             $query->execute([$email]);
-
             return $query->fetch();
       }
 

@@ -19,7 +19,7 @@ require './app/view/header/header.php';
     <!-- menu et filtres -->
     <div class="container mt-1 bg-light p-3">
         <h1 class="text-center" style="font-weight:bold; font-family:'Courier New', Courier, monospace">Notre Menu 🤗</h1>
-        <div class="container w-50 d-flex gap-1">
+        <div class="container  d-flex gap-1">
                 <input type="text" placeholder='trouver le plat que vous voulez...' class="form-control"><button class='btn btn-warning'>Rechercher</button>
         </div>
         <div class="container d-flex flex-wrap gap-5 justify-content-center mt-5">
