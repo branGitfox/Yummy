@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 
 class UserController extends UserModel {
 
@@ -6,7 +7,7 @@ class UserController extends UserModel {
      * Va retouner l'email entrer par l'utilisateur
      * @return String
      */
-    private function getEmail():String{
+    private function GetEmail():String{
         if(isset($_POST['email'])){
             return htmlentities(htmlspecialchars($_POST['email']));
         }
@@ -16,7 +17,7 @@ class UserController extends UserModel {
      * Va retouner le mot de passe entrer par l'utilisateur
      * @return String
      */
-    private function getPassword():String{
+    private function GetPassword():String{
         if(isset($_POST['password'])){
             return htmlentities(htmlspecialchars($_POST['password']));
         }
@@ -26,7 +27,13 @@ class UserController extends UserModel {
      * Va connecter un  utilisateur existant
      * @return void
      */
-    public function connectUser():void{
-        parent::connectUser($this->getEmail(), $this->getPassword());
+    public function ConnectUser():void{
+        if(parent::ConnecUser($this->GetEmail(), $this->GetPassword())){
+            header('location:../../index.php');
+        }else{
+            echo 'verifier vos information';
+        };
     }
 }
+
+?>

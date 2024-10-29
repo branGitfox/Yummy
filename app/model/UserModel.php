@@ -50,14 +50,14 @@ class UserModel extends Database {
       * @return bool|String
       */
      public function ConnecUser(String $email, String $password):bool {
-            if($this->CheckExistEmail() === true){
-                if(password_verify($password, $this->getUser()['password'])){
+            if($this->CheckExistEmail($email) === true){
+                if(password_verify($password, $this->getUser($email)['password'])){
                     $_SESSION['users']=[
-                        'id' => $this->getUser()['id_user'],
-                        'name' => $this->getUser()['username'],
-                        'email'=> $this->getUser()['email'],
-                        'tel' => $this->getUser()['tel'],
-                        'adress' => $this->getUser()['adress']
+                        'id' => $this->getUser($email)['id_user'],
+                        'name' => $this->getUser($email)['username'],
+                        'email'=> $this->getUser($email)['email'],
+                        'tel' => $this->getUser($email)['tel'],
+                        'adress' => $this->getUser($email)['adress']
                     ];
                     
                     return true;
