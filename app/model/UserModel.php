@@ -38,7 +38,7 @@ class UserModel extends Database
      * @return bool
      */
 
-    private function CheckExistEmail(String $email): bool
+    private function CheckExistEmail($email): bool
     {
         $query = parent::getpdo()->prepare('SELECT email FROM users WHERE email = ?');
         $query->execute([$email]);
@@ -52,7 +52,7 @@ class UserModel extends Database
     /**
      * @return bool|String
      */
-    public function ConnecUser(String $email, String $password): bool
+    public function ConnecUser($email,  $password): bool
     {
         if ($this->CheckExistEmail($email) === true) {
             if (password_verify($password, $this->getUser($email)['password'])) {

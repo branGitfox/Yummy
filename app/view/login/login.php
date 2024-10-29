@@ -7,7 +7,7 @@ require '../../model/UserModel.php';
 require '../../controller/UserController.php';
 
 $login = new UserController();
-$login->ConnectUser();
+$login->ConnectUser(); 
 $title = 'Yummy | Login';
 $dir = '../../..';
 require '../header/header.php';
@@ -23,15 +23,15 @@ require '../header/header.php';
         <div class="form-group">
             <div class='mb-2'>
                 <label for="email">Email</label>
-                <input type="email" class="form-control" name="email">
+                <input type="email" class="form-control" name="email" required>
             </div>
             <div class='mb-2'>
                 <label for="email">Mot de passe</label>
-                <input type="password" class="form-control" name="password">
+                <input type="password" class="form-control" name="password" required>
             </div>
             <div class='mt-2'>
 
-                <input type="submit" class="form-control btn btn-warning" value='Se connecter'>
+                <input type="submit" class="form-control btn btn-warning" name="envoyer" value='Se connecter'>
             </div>
     </form>
     <div class="container mt-3 text-center">
