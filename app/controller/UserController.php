@@ -25,7 +25,7 @@ class UserController extends UserModel
     private function GetPassword()
     {
         if (isset($_POST['password'])) {
-            return htmlentities(htmlspecialchars($_POST['password']));
+            return $_POST['password'];
         }
 
         
@@ -108,18 +108,21 @@ class UserController extends UserModel
     public function ConnectUser(): void
     {
         if(isset($_POST['envoyer'])){
-                    if (parent::ConnecUser($this->GetEmail(), $this->GetPassword())) {
-            header('location:../../index.php');
-        } else {
-            echo 'verifier vos information';
-        };
+            if (parent::ConnecUser($this->GetEmail(), $this->GetPassword())) {
+                header('location:../../../index.php');
+            } else {
+                echo 'verifier vos information';
+            };
+
+           
+
         }
 
     }
 
    public function Create():void{
     if(isset($_POST['envoyer'])){
-
+        
         parent::CreateUser($this->GetUsername(), $this->GetEmail(), password_hash($this->GetPassword(),PASSWORD_DEFAULT), $this->GetAdress(), $this->GetTel(), $this->GetProfil());
     }
    }

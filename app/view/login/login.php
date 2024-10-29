@@ -7,7 +7,8 @@ require '../../model/UserModel.php';
 require '../../controller/UserController.php';
 
 $login = new UserController();
-$login->ConnectUser(); 
+$login->ConnectUser();
+
 $title = 'Yummy | Login';
 $dir = '../../..';
 require '../header/header.php';

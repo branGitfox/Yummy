@@ -6,8 +6,8 @@ require '../../config/Database.php';
 require '../../model/UserModel.php';
 require '../../controller/UserController.php';
 $login = new UserController();
-// $login->Create();
-var_dump($login->GetProfil());
+$login->Create();
+// var_dump($login->GetProfil());
 
 $title = 'Yummy | Sign';
 $dir = '../../..';

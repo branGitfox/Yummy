@@ -24,7 +24,7 @@ class UserModel extends Database
 
     public function CreateUser(String $username, String $email, String $password, String $adress, String $tel, String $profil): void
     {
-        if ($this->CheckExistEmail($email) === false) {
+        if ($this->CheckExistEmail($email) === true) {
             $query = parent::getPdo()->prepare('INSERT INTO users(`username`,`email`,`password`,`adress`,`tel`, `profil`) VALUES (?,?,?,?,?,?)');
             $query->execute([$username, $email, $password, $adress, $tel, $profil]);
             header('location:../View/login/login.php');
@@ -38,11 +38,11 @@ class UserModel extends Database
      * @return bool
      */
 
-    private function CheckExistEmail($email): bool
+    public function CheckExistEmail($email): bool
     {
-        $query = parent::getpdo()->prepare('SELECT email FROM users WHERE email = ?');
+        $query = parent::getpdo()->prepare('SELECT * FROM users WHERE email = ?');
         $query->execute([$email]);
-        if ($query->rowCount() < 0) {
+        if ($query->rowCount() === 0) {
             return true;
         } else {
             return false;
@@ -54,8 +54,9 @@ class UserModel extends Database
      */
     public function ConnecUser($email,  $password): bool
     {
-        if ($this->CheckExistEmail($email) === true) {
-            if (password_verify($password, $this->getUser($email)['password'])) {
+        if ($this->CheckExistEmail($email) === false) {
+            echo $this->getUser($email)['password'];
+            if (password_verify($password, $this->getUser($email)['password']) == true) {
                 $_SESSION['users'] = [
                     'id' => $this->getUser($email)['id_user'],
                     'name' => $this->getUser($email)['username'],
@@ -63,12 +64,16 @@ class UserModel extends Database
                     'tel' => $this->getUser($email)['tel'],
                     'adress' => $this->getUser($email)['adress']
                 ];
-
+                
+                
                 return true;
             } else {
+               
                 return false;
             }
         } else {
+          
+
             return false;
         }
     }
