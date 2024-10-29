@@ -99,6 +99,6 @@ class UserController extends UserModel
     }
 
    public function Create():void{
-
+    parent::CreateUser($this->GetUsername(), $this->GetEmail(), password_hash($this->GetPassword(),PASSWORD_DEFAULT), $this->GetAdress(), $this->GetTel(), $this->GetProfil());
    }
 }
