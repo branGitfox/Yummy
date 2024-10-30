@@ -46,6 +46,6 @@ class CommandModel extends Database {
     public function DeleteCom($id_com){
         $query = parent::getPdo()->prepare('DELETE FROM commands WHERE id_com = ?');
         $query->execute([$id_com]);
-        header('location:../view/cart/cart.php');
+        header('location:../cart/cart.php');
     }
 }

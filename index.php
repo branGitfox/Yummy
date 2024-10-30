@@ -15,10 +15,13 @@ require './app/view/header/header.php';
         <img src="./assets/img/pizza.jpg" class="img-fluid" alt="...">
     </div>
     <!-- Image produit -->
+     <div class="container mt-4 mb-2">
+        <h2 class="text-center">Plats du Jour 🍽️🥂</h2>
+     </div>
     <div class="container d-flex flex-wrap justify-content-center gap-5 p-2 mt-3">
-        <img src="./assets/img/pizza.jpg" class="shadow" alt="..." style="width:300px;height:200px;opacity:.9">
-        <img src="./assets/img/pizza.jpg" class="shadow" alt="..." style="width:300px;height:200px;opacity:.9">
-        <img src="./assets/img/pizza.jpg" class="shadow" alt="..." style="width:300px;height:200px;opacity:.9">
+        <img id="first" class="shadow" alt="..." style="width:300px;height:200px;opacity:.9">
+        <img id="second"  class="shadow" alt="..." style="width:300px;height:200px;opacity:.9">
+        <img id="third"  class="shadow" alt="..." style="width:300px;height:200px;opacity:.9">
     </div>
     <!-- menu et filtres -->
     <div class="container mt-1 bg-light p-3">
