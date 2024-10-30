@@ -41,7 +41,7 @@ require './app/view/header/header.php';
                         <img src="./assets/img/pizza.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <p>Hamburger</p>
-                            <a href="#" class="btn btn-warning text-center">Ajouter a la commande 🍽️</a>
+                            <a href="./app/view/cart/command.php?id_prod=1" class="btn btn-warning text-center">Ajouter a la commande 🍽️</a>
                         </div>
                 </div>
                 <div class="card shadow" style="width: 20rem;">
