@@ -2,7 +2,13 @@
 session_start();
  $title = 'home';
 $dir ='.';
+require './app/config/Database.php';
+require './app/model/ProductModel.php';
+require './app/controller/ProductControlelr.php';
 require './app/view/header/header.php'; 
+
+$prod = new ProductController();
+
 
 
 ?>
@@ -25,12 +31,16 @@ require './app/view/header/header.php';
     </div>
     <!-- menu et filtres -->
     <div class="container mt-1 bg-light p-3">
-        <h1 class="text-center" style="font-weight:bold; font-family:'Courier New', Courier, monospace">Notre Menu 🤗</h1>
+        <h1 class="text-center" style="font-weight:bold; font-family:'Courier New', Courier, monospace">Notre Menu 🤗</h1> 
+        <form method="">
         <div class="container  d-flex gap-1">
-                <input type="text" placeholder='trouver le plat que vous voulez...' class="form-control"><button class='btn btn-warning'>Rechercher</button>
-        </div>
+           
+                <input type="text" placeholder='trouver le plat que vous voulez...' class="form-control" name="q"><button class='btn btn-warning'>Rechercher</button>
+           
+        </div> 
+    </form>
         <div class="container d-flex flex-wrap gap-5 justify-content-center mt-5">
-            <a href="" class="btn btn-outline-warning" style="border-radius:20px;">Pizzas</a>
+            <a href="" class="btn btn-outline-warning" style="border-radius:20px;">Toutes</a>
             <a href="" class="btn btn-outline-secondary" style="border-radius:20px;">Soupes</a>
             <a href="" class="btn btn-outline-secondary" style="border-radius:20px;">Riz</a>
             <a href="" class="btn btn-outline-secondary" style="border-radius:20px;">Tacos</a>
@@ -40,34 +50,15 @@ require './app/view/header/header.php';
             <a href="" class="btn btn-outline-secondary" style="border-radius:20px;">Glaces</a>
         </div>
         <div class="container d-flex justify-content-center gap-4 mt-5 flex-wrap">
+            <?php foreach($prod->GetAll() as $pr):?>
                 <div class="card shadow" style="width: 20rem;">
-                        <img src="./assets/img/pizza.jpg" class="card-img-top" alt="...">
+                        <img src="./assets/img/<?=$pr['prodimg']?>" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <p>Hamburger</p>
-                            <a href="./app/view/cart/command.php?id_prod=1" class="btn btn-warning text-center">Ajouter a la commande 🍽️</a>
+                            <p><?= $pr['prodname']?></p>
+                            <a href="./app/view/cart/command.php?id_prod=<?= $pr['id_prod']?>" class="btn btn-warning text-center">Ajouter a la commande 🍽️</a>
                         </div>
                 </div>
-                <div class="card shadow" style="width: 20rem;">
-                        <img src="./assets/img/pizza.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p>Hamburger</p>
-                            <a href="#" class="btn btn-warning text-center">Ajouter a la commande 🍽️</a>
-                        </div>
-                </div>
-                <div class="card shadow" style="width: 20rem;">
-                        <img src="./assets/img/pizza.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p>Hamburger</p>
-                            <a href="#" class="btn btn-warning text-center">Ajouter a la commande 🍽️</a>
-                        </div>
-                </div>
-                <div class="card shadow" style="width: 20rem;">
-                        <img src="./assets/img/pizza.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p>Hamburger</p>
-                            <a href="#" class="btn btn-warning text-center">Ajouter a la commande 🍽️</a>
-                        </div>
-                </div>
+                <?php endforeach?>
         </div>
         <div class="container absolute  mt-5 " style='height:20px;'>  
             <h6 class='text-center'>Copyright 2024 Yummy. Made with ❤️ by <a href="www.github.com/BranGitfox">Brandon Fidelin</a> </h6>
