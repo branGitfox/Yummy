@@ -10,7 +10,7 @@
                         <a class="nav-link active" aria-current="page" href="./index.php">Acceuil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./app/view/login/login.php">Votre Commande</a>
+                        <a class="nav-link" href="./app/view/cart/cart.php">Votre Commande</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">A propos de nous</a>
