@@ -19,4 +19,10 @@ class CommandController extends CommandModel{
             parent::Plus($_GET['id_cmd']);
         }
     }
+
+    public function DecremetNbr() {
+        if(isset($_GET['id_cmd'])){
+            parent::Moins($_GET['id_cmd']);
+        }
+    }
 }

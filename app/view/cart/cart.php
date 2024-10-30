@@ -35,7 +35,7 @@ $cmd = new CommandController();
                     <td><?= $data['adress']?></td>
                     <td><?= $data['cmd_name']?></td>
                     <td><?= $data['prix_unit']?></td>
-                    <td><a href="plus.php?id_cmd=<?= $data['id_com']?>" class="btn btn-success mx-1">+</a> <span class="badge bg-secondary"><?=$data['nbr']?></span><a href="moins.php?id_com=<?= $data['id_com']?>" class="btn btn-danger mx-2">-</a> </td>
+                    <td><a href="plus.php?id_cmd=<?= $data['id_com']?>" class="btn btn-success mx-1">+</a> <span class="badge bg-secondary"><?=$data['nbr']?></span><a href="moins.php?id_cmd=<?= $data['id_com']?>" class="btn btn-danger mx-2">-</a> </td>
                 </tr>
                 <?php endforeach ?>
             </tbody>
@@ -44,7 +44,7 @@ $cmd = new CommandController();
                     <td></td>
                     <td></td>
                     <td>Total</td>
-                    <td>150000</td>
+                    <td><?= $cmd->Total()?></td>
                 </tr>
             </tfoot>
         </table>

@@ -19,4 +19,26 @@ class CommandModel extends Database {
         $update->execute([$increment_nbr, $id_com]);
         header('location:../cart/cart.php');
     }
+
+    public function Moins($id_com){
+        $cmd_query = parent::getPdo()->prepare('SELECT * FROM commands WHERE id_com = ?');
+        $cmd_query->execute([$id_com]);
+        $getCom = $cmd_query->fetch();
+        $decrement_nbr = $getCom['nbr'] - 1;
+        $update = parent::getPdo()->prepare('UPDATE commands SET nbr=? WHERE id_com=?');
+        $update->execute([$decrement_nbr, $id_com]);
+        header('location:../cart/cart.php');
+    }
+
+    public function Total(){
+        $query = parent::getPdo()->prepare('SELECT * FROM commands WHERE id_user=?');
+        $query->execute([$_SESSION['users']['id']]);
+        $cmds = $query->fetchAll();
+        $total=0;
+        foreach($cmds as $cmd){
+            $total+= $cmd['nbr'] * $cmd['prix_unit'];
+        }
+
+        return $total;
+    }
 }
