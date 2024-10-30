@@ -1,6 +1,9 @@
-<?php $title = 'home';
+<?php
+session_start();
+ $title = 'home';
 $dir ='.';
 require './app/view/header/header.php'; 
+
 
 ?>
 <div id="container" class="container" style="height:100vh; overflow-y:scroll">

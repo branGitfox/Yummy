@@ -55,14 +55,15 @@ class UserModel extends Database
     public function ConnecUser($email,  $password): bool
     {
         if ($this->CheckExistEmail($email) === false) {
-            echo $this->getUser($email)['password'];
+           
             if (password_verify($password, $this->getUser($email)['password']) == true) {
                 $_SESSION['users'] = [
                     'id' => $this->getUser($email)['id_user'],
                     'name' => $this->getUser($email)['username'],
                     'email' => $this->getUser($email)['email'],
                     'tel' => $this->getUser($email)['tel'],
-                    'adress' => $this->getUser($email)['adress']
+                    'adress' => $this->getUser($email)['adress'],
+                    'profil' => $this->getUser($email)['profil']
                 ];
                 
                 
