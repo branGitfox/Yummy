@@ -45,6 +45,7 @@ $cmd = new CommandController();
                 <tr>
                     <td></td>
                     <td></td>
+                    <td></td>
                     <td>Total</td>
                     <td><?=number_format($cmd->Total())?> MGA</td>
                 </tr>
