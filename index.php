@@ -40,14 +40,14 @@ $prod = new ProductController();
         </div> 
     </form>
         <div class="container d-flex flex-wrap gap-5 justify-content-center mt-5">
-            <a href="" class="btn btn-outline-warning" style="border-radius:20px;">Toutes</a>
-            <a href="" class="btn btn-outline-secondary" style="border-radius:20px;">Soupes</a>
-            <a href="" class="btn btn-outline-secondary" style="border-radius:20px;">Riz</a>
-            <a href="" class="btn btn-outline-secondary" style="border-radius:20px;">Tacos</a>
-            <a href="" class="btn btn-outline-secondary" style="border-radius:20px;">Sambos</a>
-            <a href="" class="btn btn-outline-secondary" style="border-radius:20px;">Gratins</a>
-            <a href="" class="btn btn-outline-secondary" style="border-radius:20px;">Boissons</a>
-            <a href="" class="btn btn-outline-secondary" style="border-radius:20px;">Glaces</a>
+            <a href="index.php" class="btn btn-outline-warning" style="border-radius:20px;">Toutes</a>
+            <a href="index.php?f=1" class="btn btn-outline-secondary" style="border-radius:20px;">Tacos</a>
+            <a href="index.php?f=2" class="btn btn-outline-secondary" style="border-radius:20px;">Soupes</a>
+            <a href="index.php?f=3" class="btn btn-outline-secondary" style="border-radius:20px;">Sambos</a>
+            <a href="index.php?f=4" class="btn btn-outline-secondary" style="border-radius:20px;">Gratins</a>
+            <a href="index.php?f=5" class="btn btn-outline-secondary" style="border-radius:20px;">Boissons</a>
+            <a href="index.php?f=6" class="btn btn-outline-secondary" style="border-radius:20px;">Glaces</a>
+            <a href="index.php?f=7" class="btn btn-outline-secondary" style="border-radius:20px;">Riz</a>
         </div>
         <div class="container d-flex justify-content-center gap-4 mt-5 flex-wrap">
             <?php foreach($prod->GetAll() as $pr):?>
