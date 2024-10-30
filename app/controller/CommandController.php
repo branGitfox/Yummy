@@ -25,4 +25,13 @@ class CommandController extends CommandModel{
             parent::Moins($_GET['id_cmd']);
         }
     }
+
+
+    public function DeleteCmd() {
+        if(isset($_GET['id_com'])){
+            parent::DeleteCom($_GET['id_com']);
+        }
+    }
+
+
 }

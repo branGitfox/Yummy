@@ -6,7 +6,7 @@ class CommandModel extends Database {
         $product_query = parent::getpdo()->prepare('SELECT * FROM product WHERE id_prod = ?');
         $product_query->execute([$id_prod]);
         $getProduct = $product_query->fetch();  
-        $cmd_query = parent::getPdo()->prepare('INSERT INTO commands(`username`, `telephone`, `adress`, `cmd_name`, `prix_unit`, `id_user`, `nbr`) VALUES (?, ?, ?, ?, ?)');
+        $cmd_query = parent::getPdo()->prepare('INSERT INTO commands(`username`, `telephone`, `adress`, `cmd_name`, `prix_unit`, `id_user`, `nbr`) VALUES (?, ?, ?, ?, ?, ?, ?  )');
         $cmd_query->execute([$userInfo['name'], $userInfo['tel'], $userInfo['adress'], $getProduct['prodname'], $getProduct['price'], $userInfo['id'], 1]);
     }
 
@@ -40,5 +40,12 @@ class CommandModel extends Database {
         }
 
         return $total;
+    }
+
+
+    public function DeleteCom($id_com){
+        $query = parent::getPdo()->prepare('DELETE FROM commands WHERE id_com = ?');
+        $query->execute([$id_com]);
+        header('location:../view/cart/cart.php');
     }
 }
