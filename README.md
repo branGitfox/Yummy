@@ -16,7 +16,7 @@ user=root
 password=''
 ```
 ### Do you wanna contribute?
-Those are some features needle:
+Those are some features that we need to integrate:
 <ul>
 <li>List of every command</li>
   <li>Admin Dashboard for ˋAdminˋ and ˋusersˋ</li>
