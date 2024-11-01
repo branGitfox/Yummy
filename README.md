@@ -15,6 +15,14 @@ db_name=yummy
 user=root
 password=''
 ```
+### Do you wanna contribute?
+Those are some features needle:
+<ul>
+<li>List of every command</li>
+  <li>Admin Dashboard for ˋAdminˋ and ˋusersˋ</li>
+  <li>Forgot password </li>
+  <li>And more</li>
+</ul>
 
 
 
