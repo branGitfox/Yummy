@@ -56,7 +56,7 @@ require '../header/header.php';
             </div>
     </form>
     <div class="container mt-3 text-center">
-        <a href="">Deja un compte? Se connecter</a>
+        <a href="../login/login.php">Deja un compte? Se connecter</a>
     </div>
 </div>
 

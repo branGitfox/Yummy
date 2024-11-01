@@ -4,7 +4,7 @@ class CommandController extends CommandModel{
     public function NewCommand(){
         if(isset($_GET['id_prod'])){
             parent::New($_GET['id_prod']);
-            header('location:../view/cart.php');
+            header('location:../cart/cart.php');
         }
     }
 

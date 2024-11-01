@@ -27,7 +27,7 @@ class UserModel extends Database
         if ($this->CheckExistEmail($email) === true) {
             $query = parent::getPdo()->prepare('INSERT INTO users(`username`,`email`,`password`,`adress`,`tel`, `profil`) VALUES (?,?,?,?,?,?)');
             $query->execute([$username, $email, $password, $adress, $tel, $profil]);
-            header('location:../View/login/login.php');
+            header('location:../login/login.php');
         } else {
             echo 'cet email existe deja';
         }

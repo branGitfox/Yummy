@@ -1,5 +1,8 @@
 <?php
 session_start();
+if(!$_SESSION['users']){
+    header('location:../login/login.php');
+}
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 require '../../config/Database.php';

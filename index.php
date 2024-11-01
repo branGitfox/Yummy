@@ -1,5 +1,8 @@
 <?php
 session_start();
+if(!$_SESSION['users']){
+    header('location:./app/view/login/login.php');
+}
  $title = 'home';
 $dir ='.';
 require './app/config/Database.php';
@@ -40,14 +43,14 @@ $prod = new ProductController();
         </div> 
     </form>
         <div class="container d-flex flex-wrap gap-5 justify-content-center mt-5">
-            <a href="index.php" class="btn btn-outline-warning" style="border-radius:20px;">Toutes</a>
-            <a href="index.php?f=1" class="btn btn-outline-secondary" style="border-radius:20px;">Tacos</a>
-            <a href="index.php?f=2" class="btn btn-outline-secondary" style="border-radius:20px;">Soupes</a>
-            <a href="index.php?f=3" class="btn btn-outline-secondary" style="border-radius:20px;">Sambos</a>
-            <a href="index.php?f=4" class="btn btn-outline-secondary" style="border-radius:20px;">Gratins</a>
-            <a href="index.php?f=5" class="btn btn-outline-secondary" style="border-radius:20px;">Boissons</a>
-            <a href="index.php?f=6" class="btn btn-outline-secondary" style="border-radius:20px;">Glaces</a>
-            <a href="index.php?f=7" class="btn btn-outline-secondary" style="border-radius:20px;">Riz</a>
+            <a  href="index.php"     class="bot  btn btn-outline-<?=!isset($_GET['f'])?'warning':'secondary'?>" style="border-radius:20px;">Toutes</a>
+            <a  href="index.php?f=1" class="bot  btn btn-outline-<?= $_GET['f']==1?'warning':'secondary'?>" style="border-radius:20px;">Tacos</a>
+            <a  href="index.php?f=2" class="bot  btn btn-outline-<?=$_GET['f']==2?'warning':'secondary'?>" style="border-radius:20px;">Soupes</a>
+            <a  href="index.php?f=3" class="bot  btn btn-outline-<?=$_GET['f']==3?'warning':'secondary'?>" style="border-radius:20px;">Sambos</a>
+            <a  href="index.php?f=4" class="bot  btn btn-outline-<?=$_GET['f']==4?'warning':'secondary'?>" style="border-radius:20px;">Gratins</a>
+            <a  href="index.php?f=5" class="bot  btn btn-outline-<?=$_GET['f']==5?'warning':'secondary'?>" style="border-radius:20px;">Boissons</a>
+            <a  href="index.php?f=6" class="bot  btn btn-outline-<?=$_GET['f']==6?'warning':'secondary'?>" style="border-radius:20px;">Glaces</a>
+            <a  href="index.php?f=7" class="bot  btn btn-outline-<?= $_GET['f']==7?'warning':'secondary'?>" style="border-radius:20px;">Riz</a>
         </div>
         <div class="container d-flex justify-content-center gap-4 mt-5 flex-wrap">
             <?php foreach($prod->GetAll() as $pr):?>
@@ -69,5 +72,14 @@ $prod = new ProductController();
 
 </div>
 
-
+<!-- <script>
+    const btns = document.querySelectorAll('.bot')
+    const container = document.querySelector('#container')
+    btns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault()
+            container.scrollTo()
+        })
+    })
+</script> -->
 <?php require './app/view/footer/footer.php'; ?>

@@ -16,7 +16,7 @@
                         <a class="nav-link" href="#">A propos de nous</a>
                     </li>
                 </ul>
-                <div class="d-flex align-items-center gap-3" role="search" style="cursor: pointer;">
+                <div class="d-flex align-items-center gap-3" role="search" style="cursor: pointer;" onclick="confirm('Vous voulez vraiment vous deconnecte?')?location.href='deconnexion.php':''">
                     <h6 class=" mt-2"><?= $_SESSION['users']['name']?></h6>
                     <img src="<?= $dir.'/app/images/'.$_SESSION['users']['profil']?>"  style="width: 30px; height:30px;border-radius:50%;" alt="">
 </div>
