@@ -20,6 +20,7 @@ Those are some features that we need to integrate:
 <ul>
 <li>List of every command</li>
   <li>Admin Dashboard for ˋAdminˋ and ˋusersˋ</li>
+  <li>User Profil and logout</li>
   <li>Forgot password </li>
   <li>And more</li>
 </ul>
