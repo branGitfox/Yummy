@@ -22,7 +22,7 @@ Those are some features that we need to integrate:
   <li>Admin Dashboard for ˋAdminˋ and ˋusersˋ</li>
   <li>User Profil and logout</li>
   <li>Forgot password </li>
-  <li>And more</li>
+  <li>Theme</li>
 </ul>
 
 
